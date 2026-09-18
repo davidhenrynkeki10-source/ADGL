@@ -180,7 +180,9 @@
     max-width:var(--container); margin:0 auto; padding:0 2rem 6.5rem;
     display:grid; grid-template-columns:repeat(2,1fr); gap:1.4rem;
   }
-  .service-card:nth-child(5):last-child{ grid-column:1 / -1; }
+  .service-card:nth-child(7):last-child {
+  grid-column: 1 / -1;
+}
   .service-card{
     position:relative; overflow:hidden; min-height:380px;
     display:flex; align-items:flex-end; border:1px solid var(--line);
@@ -254,6 +256,103 @@
   .project-card__tag{ font-family:var(--font-display); font-size:.72rem; color:var(--gold-light); }
   .project-card__title{ font-family:var(--font-display); font-size:1.3rem; }
   .project-card__meta{ font-size:.82rem; color:var(--text-dim); }
+
+  /* ============================================================
+   PROJECTS IN MOTION
+============================================================= */
+
+.projects-motion {
+  padding-bottom: 7rem;
+  background: var(--bg);
+}
+
+.projects-motion__wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.projects-motion__video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg-elevate);
+  border: 1px solid var(--line);
+}
+
+.projects-motion__video video {
+  display: block;
+  width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  background: #000;
+}
+
+.projects-motion__details {
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.projects-motion__number {
+  display: block;
+  margin-bottom: 0.45rem;
+
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--gold);
+}
+
+.projects-motion__details h3 {
+  font-size: 1.4rem;
+  color: var(--paper);
+}
+
+.projects-motion__location {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+
+/* Projects in Motion — Mobile */
+@media (max-width: 600px) {
+
+  .projects-motion {
+    padding-bottom: 5rem;
+  }
+
+  .projects-motion__wrap {
+    padding: 0 1.25rem;
+  }
+
+  .projects-motion__video {
+    border-radius: 2px;
+  }
+
+  .projects-motion__video video {
+    width: 100%;
+    max-height: 520px;
+  }
+
+  .projects-motion__details {
+    padding: 1.2rem 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .projects-motion__details h3 {
+    font-size: 1.2rem;
+  }
+}
 
   /* ============================================================
      RECOGNITION
@@ -572,6 +671,51 @@
           <p>Full interior fit-outs and styling that turn a finished shell into a space people actually want to live in.</p>
         </div>
       </div>
+
+      <!-- Land Sales & Management -->
+<article class="service-card reveal-up">
+  <img
+    class="service-card__bg"
+    src="images/land-sales.jpeg"
+    alt="Land for sale and property management by Atimoara Dee Global Limited"
+  >
+
+  <div class="service-card__overlay"></div>
+
+  <div class="service-card__content">
+    <span class="service-card__index">06</span>
+
+    <h3>Land Sales & Management</h3>
+
+    <p>
+      Secure land opportunities and professional property management,
+      from acquisition to long-term ownership.
+    </p>
+  </div>
+</article>
+
+
+<!-- Swimming Pool Construction -->
+<article class="service-card reveal-up">
+  <img
+    class="service-card__bg"
+    src="images/pool-construction.jpeg"
+    alt="Swimming pool construction by Atimoara Dee Global Limited"
+  >
+
+  <div class="service-card__overlay"></div>
+
+  <div class="service-card__content">
+    <span class="service-card__index">07</span>
+
+    <h3>Swimming Pool Construction</h3>
+
+    <p>
+      Custom swimming pools designed and constructed for residential
+      and commercial properties.
+    </p>
+  </div>
+</article>
     </div>
   </section>
 
@@ -601,6 +745,46 @@
       </div>
     </div>
   </section>
+
+  <!-- ============================================================
+     PROJECTS IN MOTION
+============================================================= -->
+<section class="projects-motion" id="projects-motion">
+
+  <div class="section-head">
+    <div>
+      <span class="eyebrow reveal-up">Projects in Motion</span>
+
+      <h2 class="reveal-up">
+        See our work take shape.
+      </h2>
+    </div>
+
+    <p class="reveal-up">
+      From active construction sites to completed developments,
+      experience the work, detail and execution behind
+      Atimoara Dee Global Limited.
+    </p>
+  </div>
+
+  <div class="projects-motion__wrap reveal-up">
+
+    <div class="projects-motion__video">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+      >
+        <source src="videos/project-1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+   
+
+  </div>
+
+</section>
 
   <!-- RECOGNITION -->
   <section class="recognition" id="recognition">
